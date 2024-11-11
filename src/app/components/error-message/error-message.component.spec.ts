@@ -4,7 +4,7 @@ import { IonicModule } from '@ionic/angular';
 import { ErrorMessageComponent } from './error-message.component';
 import {FormControl, FormGroup} from "@angular/forms";
 
-fdescribe('ErrorMessageComponent', () => {
+describe('ErrorMessageComponent', () => {
   let component: ErrorMessageComponent;
   let fixture: ComponentFixture<ErrorMessageComponent>;
 
