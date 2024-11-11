@@ -1,0 +1,21 @@
+<ion-card>
+  <ion-card-content>
+    <ion-item lines="none">
+      <ion-icon [name]="getIcon(call)" slot="start" [color]="getIconColor(call)"></ion-icon>
+      <ion-label>
+        {{call.status}}
+        <p>{{call.modified}}</p>
+      </ion-label>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label>
+        <p>Created at {{call.created}}</p>
+        <p>Notes: {{call.notes}}</p>
+      </ion-label>
+    </ion-item>
+    <ion-item lines="none" *ngIf="isFinished(call)">
+      <ion-icon name="trophy" slot="start" color="success"></ion-icon>
+      <ion-label color="success">$ {{isFinished(call) && call.reward}}</ion-label>
+    </ion-item>
+  </ion-card-content>
+</ion-card>

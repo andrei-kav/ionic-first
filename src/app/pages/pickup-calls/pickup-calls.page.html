@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button color="light"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="light">My pickup calls</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <app-pickup-call-card
+    *ngFor="let call of calls"
+    [call]="call"
+  ></app-pickup-call-card>
+
+</ion-content>

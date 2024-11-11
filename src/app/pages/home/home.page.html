@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-menu-button auto-hide="false" color="light"></ion-menu-button>
+    </ion-buttons>
+    <ion-title color="light">Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="assets/avatars/01.jpg" alt="avatar">
+      </ion-avatar>
+      <ion-label>
+        <h1>Name</h1>
+        <p>Gathered <span class="money">$ 13.11</span></p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-item lines="none">
+    <ion-label class="last-call">
+      Last Pickup call
+    </ion-label>
+  </ion-item>
+
+  <app-pickup-call-card [call]="lastCall"></app-pickup-call-card>
+
+  <ion-button color="success" size="full" (click)="showAll()">See all...</ion-button>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="success" (click)="creatNewCall()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
