@@ -2,6 +2,7 @@ import {NgModule} from "@angular/core";
 import {PickupCallCardComponent} from "./pickup-call-card/pickup-call-card.component";
 import {IonicModule} from "@ionic/angular";
 import {CommonModule} from "@angular/common";
+import {ErrorMessageComponent} from "./error-message/error-message.component";
 
 @NgModule({
   imports: [
@@ -9,10 +10,12 @@ import {CommonModule} from "@angular/common";
     IonicModule,
   ],
   declarations: [
-    PickupCallCardComponent
+    PickupCallCardComponent,
+    ErrorMessageComponent
   ],
   exports: [
-    PickupCallCardComponent
+    PickupCallCardComponent,
+    ErrorMessageComponent
   ]
 })
 export class ComponentsModule {}
