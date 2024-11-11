@@ -6,10 +6,20 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import {AppStoreModule} from "../store/AppStoreModule";
+import {StoreDevtoolsModule} from "@ngrx/store-devtools";
+import {ComponentsModule} from "./components/components.module.";
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [
+    BrowserModule,
+    IonicModule.forRoot(),
+    AppRoutingModule,
+    ...AppStoreModule,
+    StoreDevtoolsModule.instrument({maxAge: 29}),
+    ComponentsModule
+  ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
